@@ -1,0 +1,14 @@
+<!--components/rank/rank.wxml-->
+<view class="container">
+ <view class="greytext ">{{name}}</view>
+ <view>
+  <view wx:for="{{array}}" wx:key="index" class="cell-item" >
+    <view style="margin-top:1%">
+      <van-icon name="fire" color="#f33" />
+    </view>
+    <view>
+      {{item.title}}
+    </view>
+  </view>
+ </view>
+</view>

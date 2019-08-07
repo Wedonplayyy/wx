@@ -1,0 +1,14 @@
+<!--components/category/category.wxml-->
+<view class="container">
+ <view class="greytext ">{{name}}</view>
+ <view class="grid">
+  <view wx:for="{{array}}" wx:key="index" class="grid-item">
+   <view class="boldtext" bindtap="toMinor">
+    {{item.name}}
+   </view>
+   <view class="greytext minertext">
+    {{item.bookCount}}本
+   </view>
+  </view>
+ </view>
+</view>

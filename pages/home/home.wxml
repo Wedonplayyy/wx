@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view>
+<van-tabs>
+  <van-tab title="分类">
+    <category name="男生" array="{{classification.male}}"></category>
+    <category name="女生" array="{{classification.female}}"></category>
+    <category name="出版" array="{{classification.press}}"></category>
+  </van-tab>
+  <van-tab title="排行">
+    <rank array="{{rank.epub}}"></rank>
+    <rank name="男生" array="{{rank.male}}"></rank>
+    <rank name="女生" array="{{rank.female}}"></rank>
+  </van-tab>
+</van-tabs>
+</view>

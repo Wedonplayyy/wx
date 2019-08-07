@@ -1,0 +1,23 @@
+/* components/category/category.wxss */
+.container{
+  margin:5%;
+  width: 100%;
+}
+.greytext{
+  color: grey;
+}
+.boldtext{
+  font-weight: bolder;
+  margin: 5% 0%;
+}
+.minertext{
+  font-size: 6%;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+.grid-item{
+  padding:5%;
+  text-align: center;
+}

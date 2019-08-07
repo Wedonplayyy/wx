@@ -1,0 +1,16 @@
+/* components/rank/rank.wxss */
+/* components/category/category.wxss */
+.container{
+  margin:0% 5% 7% 5%;
+  width: 100%;
+}
+.greytext{
+  color: grey;
+}
+.cell-item{
+  display: flex;
+  align-items: center;
+  width:86%;
+  padding:3% 2%;
+  border-bottom:1px solid lightgrey;
+}

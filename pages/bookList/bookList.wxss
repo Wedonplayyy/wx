@@ -1,0 +1,19 @@
+/* pages/bookList/bookList.wxss */
+.container{
+  margin: 0px 5%;
+  width: 100%;
+}
+.greytext{
+  color: grey;
+}
+.minertext{
+  font-size: 6%;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}
+.grid-item{
+  margin:5%;
+  text-align: center;
+}

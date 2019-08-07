@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/bookList/bookList",
+    "pages/bookSearch/bookSearch",
+    "pages/minor/minor"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f33",
+    "navigationBarTitleText": "书城",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/bookList/bookList",
+        "text": "书架",
+        "iconPath": "/icons/book.png",
+        "selectedIconPath": "/icons/bookSelected.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "书城",
+        "iconPath": "/icons/home.png",
+        "selectedIconPath": "/icons/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/bookSearch/bookSearch",
+        "text": "搜索",
+        "iconPath": "/icons/search.png",
+        "selectedIconPath": "/icons/searchSelected.png"
+      }
+    ],
+    "selectedColor": "#f33"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-icon": "/lib/vant/icon/index",
+    "van-tab": "/lib/vant/tab/index",
+    "van-tabs": "/lib/vant/tabs/index"
+  }
+}
