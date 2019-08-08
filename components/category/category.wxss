@@ -10,7 +10,7 @@
   font-weight: bolder;
   margin: 5% 0%;
 }
-.minertext{
+.minortext{
   font-size: 6%;
 }
 .grid{

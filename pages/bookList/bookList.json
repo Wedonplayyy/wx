@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText":"我的书架"
+  "usingComponents": {
+    "van-icon":"/lib/vant/icon/index",
+    "van-search":"/lib/vant/search/index"
+  },
+  "navigationBarTitleText": "我的书架"
 }

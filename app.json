@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/bookList/bookList",
     "pages/bookSearch/bookSearch",
-    "pages/minor/minor"
+    "pages/minor/minor",
+    "pages/bookDetail/bookDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,1 +1,34 @@
 /* pages/bookSearch/bookSearch.wxss */
+.body{
+  margin: 3% 5%;
+  width: 100%;
+}
+.search {
+  width: 90%;
+  height: 30px;
+}
+.piece{
+  width:80%;
+  margin: 5%;
+}
+.hotword{
+  display: flex;
+  justify-content: space-between;
+
+}
+.flex-container{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.flex-item{
+  color: white;
+  background-color: red;
+  margin:4px;
+  padding:6px;
+}
+.history{
+  display: flex;
+  justify-content: space-between;
+
+}

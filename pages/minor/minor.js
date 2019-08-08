@@ -13,12 +13,7 @@ Page({
    */
   onLoad: function (options) {
     let api = getApp().globalData.api;
-    wx.request({
-      url: api + '/book/by-categories?gender=male&type=hot&major=%22%E7%8E%84%E5%B9%BB%22&start=1&limit=20',
-      success: (res) => {
-      console.log(res.data)
-      }
-    })
+    
   },
 
   /**

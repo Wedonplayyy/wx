@@ -1,2 +1,30 @@
 <!--pages/bookSearch/bookSearch.wxml-->
-<text>pages/bookSearch/bookSearch.wxml</text>
+<van-search 
+  value="{{ value }}" 
+  maxlength="20"
+  bind:clear="show"
+  input-align="center"
+  class="search" 
+  placeholder="输入书名或作者名" 
+  bind:search="search"/>
+<searchResult wx:if="{{flag}}" books="{{books}}"></searchResult>
+<view class="body" wx:else>
+  <view class="piece">
+    <view class="hotword">
+      <view>大家都在搜</view>
+      <view bindtap="change" style="color:orange"><van-icon name="replay" size="15px" color="orange"/>换一换</view>
+    </view>
+    <view  class="flex-container">
+      <view wx:for="{{randomHotWords}}" wx:key="index" class="flex-item" style="background-color:{{randomColor[index]}}; opacity:0.6;">
+        {{item}}
+      </view>
+    </view>
+  </view>
+  
+  <view class="piece">
+    <view class="history">
+      <view>搜索历史</view>
+      <view style="color:orange"><van-icon name="replay" size="15px" color="orange"/>清空            </view>
+    </view>
+  </view>
+</view>

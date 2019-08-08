@@ -1,17 +1,21 @@
 <!--pages/bookList/bookList.wxml-->
-<view class="container">
+<view class="body">
  <view class="grid">
-  <view wx:for="{{data.bookLists}}" wx:key="index" class="grid-item">
+  <view wx:for="{{data.bookLists}}" wx:key="index" class="grid-item" >
   <image 
   wx:if="{{item.cover!==''}}"
   src="{{host+item.cover}}" 
   style="width:75px;height:100px"
-  mode="aspectFit" ></image>
+  mode="aspectFit" 
+  bindtap="toDetail"
+  data-id="{{item._id}}"></image>
   <image 
   wx:else
   src="/icons/error.png" 
   style="width:75px;height:100px"
-  mode="aspectFit" ></image>
+  mode="aspectFit" 
+  bindtap="toDetail"
+  data-id="{{item._id}}"></image>
    <view>
     {{item.title}}
    </view>

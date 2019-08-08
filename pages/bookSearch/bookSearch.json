@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "searchResult":"/components/searchResult/searchResult",
+    "van-search": "/lib/vant/search/index"
+  },
+  "navigationBarTitleText": "搜索"
 }

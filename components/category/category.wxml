@@ -6,7 +6,7 @@
    <view class="boldtext" bindtap="toMinor">
     {{item.name}}
    </view>
-   <view class="greytext minertext">
+   <view class="greytext minortext">
     {{item.bookCount}}本
    </view>
   </view>

@@ -1,5 +1,5 @@
 /* pages/bookList/bookList.wxss */
-.container{
+.body{
   margin: 0px 5%;
   width: 100%;
 }
