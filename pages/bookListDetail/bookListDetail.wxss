@@ -1,13 +1,7 @@
-/* pages/bookList/bookList.wxss */
-.header{
-  width:301px;
-  padding:10px 17px;
-  display: flex;
-  justify-content: space-between;
-}
+/* pages/bookListDetail/bookListDetail.wxss */
 .body{
-  margin: 0px 20px;
-  width: 375px;
+  margin: 0px 5%;
+  width: 100%;
 }
 .greytext{
   color: grey;

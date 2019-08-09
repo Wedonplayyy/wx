@@ -12,6 +12,7 @@ Page({
     color: ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 'lime', 'maroon', 'navy', 'olive', 'orange', 'purple', 'red', 'silver', 'teal', 'yellow'],//颜色
     randomColor: [],//随机颜色
     books:[],//搜索到的图书列表
+    history: [],//搜索历史
   },
     
 
@@ -43,7 +44,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.change();
+    this.setData({
+      value: '',
+      flag:false,
+      books: []
+    })
   },
 
   /**
@@ -83,15 +89,23 @@ Page({
 
   search(e){//点击回车搜索
     let api = getApp().globalData.api;
+    let history = this.data.history;
+    history.push(e.detail)
     this.setData({
-      value: e.detail
+      value: e.detail,
+      history
     })
     console.log(this.data.value);
+    console.log(this.data.history);
+
     wx.request({
       url: api + '/book/fuzzy-search?start=0&limit=50&v=1&query=' + this.data.value,
       success:(res)=> {
         if(res.data.books.length===0){
           console.log("未搜索到~~");
+          this.setData({
+            books: res.data.books
+          })
         }
         else{
           console.log("一共找到"+res.data.books.length)
@@ -120,7 +134,14 @@ Page({
       randomHotWords:randomWords,
       randomColor:randomColor
     });
-      
+    console.log("换一换！")
+  },
+
+  clear(){//清空搜索历史
+    this.setData({
+      history:[]
+    });
+    console.log("清空！")
   },
 
   getRandNumForRangeN(least, max, num) {//产生随机不重复数

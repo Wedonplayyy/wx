@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "van-icon":"/lib/vant/icon/index",
-    "van-search":"/lib/vant/search/index"
+    "van-button": "/lib/vant/button/index"
   },
   "navigationBarTitleText": "我的书架"
 }

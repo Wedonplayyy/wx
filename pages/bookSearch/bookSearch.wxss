@@ -23,9 +23,14 @@
 }
 .flex-item{
   color: white;
-  background-color: red;
   margin:4px;
   padding:6px;
+}
+.history-item{
+  color: white;
+  margin:4px;
+  padding:4px 6px;
+  border-radius: 10px;
 }
 .history{
   display: flex;

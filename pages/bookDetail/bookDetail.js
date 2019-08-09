@@ -1,31 +1,30 @@
-// pages/bookList/bookList.js
+// pages/bookDetail/bookDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data:{},
-    host:''
+    id:"",//图书id
+    getData:{},//get数据
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let api = getApp().globalData.api;
     this.setData({
-      host: getApp().globalData.STATIC_HOST
+      id:options.id
     })
+    console.log(this.data.id);
+    let api = getApp().globalData.api;
     wx.request({
-      url: api + '/book-list',
-      success: (res) => {
-        this.setData({
-          data: res.data
-        })
-        console.log(this.data.data)
+      url: api + '/book-list/' + this.data.id,
+      success:(res)=> {
+        console.log(res.data);
+        
       }
-    });
+    })
   },
 
   /**
@@ -75,20 +74,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  toListDetail(e){/** 跳转详情页面 */
-    let id = e.target.dataset.id;
-    wx.navigateTo({
-      url: `/pages/bookListDetail/bookListDetail?id=${id}`,
-    })
-  },
-
-  toHelp(){
-    wx.navigateTo({
-      url: '/pages/help/help',
-    })
   }
-
-
 })

@@ -1,0 +1,38 @@
+/* components/searchResult/searchResult.wxss */
+.body{
+  margin: 10px 15px;
+}
+.item{
+  display: flex;
+  margin:10px 2px;
+}
+.text{
+  padding: 0px 5px;
+}
+.greytext{
+  color: grey;
+}
+.orangetext{
+  color:orange;
+}
+.boldtext{
+  font-weight: bolder;
+}
+.minortext{
+  font-size: 6%;
+}
+.shortIntro{
+   display: -webkit-box;
+   word-break: break-all;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp:3;
+   margin: 5px 0px;
+}
+.author{
+  margin:5px 0px;
+}
+.follow{
+  font-size: 15px;
+}

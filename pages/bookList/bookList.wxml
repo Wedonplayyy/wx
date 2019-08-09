@@ -1,5 +1,9 @@
 <!--pages/bookList/bookList.wxml-->
 <view class="body">
+  <view class="header">
+    <van-icon name="edit" size="27px"/> 
+    <van-button type="default" size="small" bind:click="toHelp">帮助</van-button>
+  </view>
  <view class="grid">
   <view wx:for="{{data.bookLists}}" wx:key="index" class="grid-item" >
   <image 
@@ -7,14 +11,14 @@
   src="{{host+item.cover}}" 
   style="width:75px;height:100px"
   mode="aspectFit" 
-  bindtap="toDetail"
+  bindtap="toListDetail"
   data-id="{{item._id}}"></image>
   <image 
   wx:else
   src="/icons/error.png" 
   style="width:75px;height:100px"
   mode="aspectFit" 
-  bindtap="toDetail"
+  bindtap="toListDetail"
   data-id="{{item._id}}"></image>
    <view>
     {{item.title}}

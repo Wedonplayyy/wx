@@ -1,0 +1,19 @@
+<!--pages/bookListDetail/bookListDetail.wxml-->
+<view class="body">
+ <view class="grid">
+  <view wx:for="{{bookList}}" wx:key="index" class="grid-item" >
+  <image 
+  src="{{host+item.book.cover}}" 
+  style="width:75px;height:100px"
+  mode="aspectFit" 
+  bindtap="toDetail"
+  data-id="{{item.book._id}}"></image>
+   <view>
+    {{item.book.title}}
+   </view>
+   <view class="greytext minertext">
+    {{item.book.author}}
+   </view>
+  </view>
+ </view>
+</view>

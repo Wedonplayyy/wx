@@ -1,0 +1,18 @@
+<!--components/searchResult/searchResult.wxml-->
+<view wx:if="{{books.length!==0}}" class="body">
+  <view wx:for="{{books}}" wx:key="index" class="item">
+    <view class="img">
+      <image src="{{host+item.cover}}"
+      style="height:150px;width:120px;"
+      mode="aspectFit" 
+      bindtap="toDetail"></image>
+    </view>
+    <view class="text">
+      <view class="title boldtext" bindtap="toDetail">{{item.title}}</view>
+      <view class="author minortext greytext">{{item.author}}</view>
+      <view class="shortIntro minortext greytext">{{item.shortIntro}}</view>
+      <view class="follow orangetext">最近收藏:{{item.latelyFollower}}</view>
+    </view>
+  </view>
+</view>
+<view wx:else>抱歉，没有找到相关内容~~</view>

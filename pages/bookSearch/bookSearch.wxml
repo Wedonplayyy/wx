@@ -24,7 +24,13 @@
   <view class="piece">
     <view class="history">
       <view>搜索历史</view>
-      <view style="color:orange"><van-icon name="replay" size="15px" color="orange"/>清空            </view>
+      <view bindtap="clear" style="color:orange"><van-icon name="replay" size="15px" color="orange"/>清空</view>
+      
+    </view>
+    <view  class="flex-container">
+      <view wx:for="{{history}}" wx:key="index" class="history-item" style="background-color:grey; opacity:0.6;">
+        {{item}}
+      </view>
     </view>
   </view>
 </view>
