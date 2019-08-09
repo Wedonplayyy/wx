@@ -4,7 +4,7 @@
  <view>
   <view wx:for="{{array}}" wx:key="index" class="cell-item" >
     <view style="margin-top:1%">
-      <van-icon name="fire" color="#f33" />
+      <van-icon name="{{host+item.cover}}" color="#f33" />
     </view>
     <view>
       {{item.title}}

@@ -5,6 +5,7 @@
       <image src="{{host+item.cover}}"
       style="height:150px;width:120px;"
       mode="aspectFit" 
+      data-id="{{item._id}}"
       bindtap="toDetail"></image>
     </view>
     <view class="text">

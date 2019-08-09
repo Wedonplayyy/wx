@@ -16,7 +16,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    host: 'https://statics.zhuishushenqi.com'//静态资源地址
   },
 
   /**

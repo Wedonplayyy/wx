@@ -21,8 +21,9 @@ Component({
    */
   methods: {
     toDetail(e) {/** 跳转详情页面 */
+    let id = e.target.dataset.id
       wx.navigateTo({
-        url: '/pages/bookDetail/bookDetail',
+        url: `/pages/bookDetail/bookDetail?id=${id}`,
       })
     },
   }

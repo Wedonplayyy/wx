@@ -12,7 +12,7 @@
   <view class="piece">
     <view class="hotword">
       <view>大家都在搜</view>
-      <view bindtap="change" style="color:orange"><van-icon name="replay" size="15px" color="orange"/>换一换</view>
+      <view bindtap="change" style="color:orange"><van-icon name="replay" size="16px" color="orange" style="vertical-align:middle;"/>换一换</view>
     </view>
     <view  class="flex-container">
       <view wx:for="{{randomHotWords}}" wx:key="index" class="flex-item" style="background-color:{{randomColor[index]}}; opacity:0.6;">
@@ -24,7 +24,7 @@
   <view class="piece">
     <view class="history">
       <view>搜索历史</view>
-      <view bindtap="clear" style="color:orange"><van-icon name="replay" size="15px" color="orange"/>清空</view>
+      <view bindtap="clear" style="color:orange"><van-icon name="replay" size="16px" color="orange" style="vertical-align:middle;"/>清空</view>
       
     </view>
     <view  class="flex-container">

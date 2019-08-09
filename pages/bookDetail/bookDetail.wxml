@@ -1,2 +1,46 @@
 <!--pages/bookDetail/bookDetail.wxml-->
-<view class="background"></view>
+<view class="background">
+  <canvas class="mycanvas" style="width: 125px; height: 180px;" canvas-id="firstCanvas"></canvas>
+</view>
+<view class="container">
+  <view class="title">{{book.title}}</view>
+  <view class="author">{{book.author}}</view>
+  <view style="width:250px;display:flex;padding:5px 10px;justify-content: space-between;">
+    <view><van-button plain round type="danger">开始阅读</van-button></view>
+    <view><van-button plain round type="default">加入书架</van-button></view>
+  </view>
+  <view>
+    <van-rate
+    readonly
+    value="{{ book.rating.score/2 }}"
+    />
+  </view>
+  <view style="font-size:14px;display:flex">
+    <view>更新至</view>
+    <view style="color:lightblue">{{book.lastChapter}}</view>
+  </view>
+  <view>
+    <van-tabs>
+      <van-tab title="详情" ><view class="intro">简介：{{book.longIntro}}</view></van-tab>
+      <van-tab title="评价"></van-tab>
+    </van-tabs>
+  </view>
+  <view style="width:375px;margin-top:20px;">
+    <van-icon name="bars" style="vertical-align:middle;"/>总目录
+  </view>
+  <view style="width:300px;display: flex;justify-content: space-between;margin-top:40px;">
+    <view>看过这本书的人还看过</view>
+    <view bindtap="change" style="color:orange"><van-icon name="replay" size="15px" color="orange" style="vertical-align:middle;"/>换一换</view>
+  </view>
+  <view class="related">
+    <view class="related-books" wx:for="{{randomBooks}}" wx:key="index">
+      <image 
+      src="{{host+item.cover}}"
+      style="width:90px;height:150px"
+      mode="aspectFit" 
+      bindtap="toDetail"
+      data-id="{{item._id}}"></image>
+      <view style="font-size:16px;">{{item.title}}</view>
+    </view>
+  </view>
+</view>

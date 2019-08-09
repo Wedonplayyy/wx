@@ -39,5 +39,12 @@ App({
     userInfo: null,
     api: 'https://api.zhuishushenqi.com',
     STATIC_HOST: 'https://statics.zhuishushenqi.com'
+  },
+
+  toDetail(e) {
+    let id = e.target.dataset.id;
+    wx.navigateTo({
+      url: `/pages/bookDetail/bookDetail?id=${id}`,
+    })
   }
 })
