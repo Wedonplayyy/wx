@@ -1,5 +1,6 @@
 // pages/bookDetail/bookDetail.js
 const app = getApp();
+let common = require("../../lib/api.js")
 Page({
 
   /**
@@ -11,6 +12,8 @@ Page({
     book:{},//get的book数据
     relatedBooks:[],//相关书籍列表
     randomBooks:[],//随机相关列表
+    comment:[],//评论
+    chapter:0,//章节数量
   },
 
   /**
@@ -32,17 +35,16 @@ Page({
           book: res.data,
         }); 
         ctx.drawImage(this.data.host + this.data.book.cover, 0, 0, 125, 180);
-        ctx.draw()
+        ctx.draw();
       }
     });
-
     wx.request({
-      url: api + '/post/by-book?book=' + this.data.id,
+      url: common.comment.discussions(this.data.id),
       success: (res) => {
         console.log(res.data);
-        // this.setData({
-          
-        // });
+        this.setData({
+          comment:res.data.posts
+        });
       }
     });
 
@@ -57,6 +59,16 @@ Page({
         this.change();
       }
     });
+
+    wx.request({
+      url: common.book.bookChaptersBookId(options.id),
+      success: (res) => {
+        console.log(res.data)
+        this.setData({
+          chapter:res.data.mixToc.chapters.length
+        })
+      }
+    })
   },
 
   /**
@@ -131,5 +143,12 @@ Page({
     numList.sort(function () { return Math.random() < 0.5 ? -1 : 1 });
     // 返回前N个值
     return numList.slice(0, num);
+  },
+
+  toBook(e) {/** 跳转详情页面 */
+    let id = e.target.dataset.id;
+    wx.navigateTo({
+      url: `/pages/book/book?id=${id}`,
+    })
   },
 })

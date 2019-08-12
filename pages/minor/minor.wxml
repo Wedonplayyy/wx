@@ -1,2 +1,35 @@
 <!--pages/minor/minor.wxml-->
-<text>pages/minor/minor.wxml</text>
+<van-tabs active="{{ active1 }}" bind:change="onChange">
+  <van-tab title="热门" >
+    <van-tabs active="{{ active2 }}">
+      <van-tab title="全部"></van-tab>
+      <van-tab wx:for="{{mins}}" title="{{item}}" wx:key="index">
+        <bookItem books="{{books}}"></bookItem>
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+  <van-tab title="新书"><van-tabs active="{{ active2 }}">
+      <van-tab title="全部"></van-tab>
+      <van-tab wx:for="{{mins}}" title="{{item}}" wx:key="index">
+        <bookItem books="{{books}}"></bookItem>
+      </van-tab>
+    </van-tabs></van-tab>
+  <van-tab title="好评"><van-tabs active="{{ active2 }}">
+      <van-tab title="全部"></van-tab>
+      <van-tab wx:for="{{mins}}" title="{{item}}" wx:key="index">
+        <bookItem books="{{books}}"></bookItem>
+      </van-tab>
+    </van-tabs></van-tab>
+  <van-tab title="完结"><van-tabs active="{{ active2 }}">
+      <van-tab title="全部"></van-tab>
+      <van-tab wx:for="{{mins}}" title="{{item}}" wx:key="index">
+        <bookItem books="{{books}}"></bookItem>
+      </van-tab>
+    </van-tabs></van-tab>
+  <van-tab title="VIP"><van-tabs active="{{ active2 }}">
+      <van-tab title="全部"></van-tab>
+      <van-tab wx:for="{{mins}}" title="{{item}}" wx:key="index">
+        <bookItem books="{{books}}"></bookItem>
+      </van-tab>
+    </van-tabs></van-tab>
+</van-tabs>

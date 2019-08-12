@@ -20,7 +20,7 @@ Page({
         this.setData({
           classification:res.data
         })
-        console.log(this.data.classification)
+        console.log(this.data)
       }
     });
     wx.request({

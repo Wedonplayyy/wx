@@ -7,8 +7,11 @@ Component({
     name: {
       type: String
     },
+    gender:{
+      type: String
+    },
     array:{
-      type:Array
+      type: Array
     }
   },
 
@@ -24,9 +27,11 @@ Component({
    */
   methods: {
     toMinor(e) {
-      let msg = e.target.dataset.msg;
+      let gender = e.target.dataset.gender;
+      let major = e.target.dataset.major;
+      let id = e.target.dataset.id;
       wx.navigateTo({
-        url: '/pages/minor/minor',
+        url: `/pages/minor/minor?gender=${gender}&major=${major}&id=${id}`,
       })
     },
   }

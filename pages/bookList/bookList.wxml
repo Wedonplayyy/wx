@@ -9,14 +9,14 @@
   <image 
   wx:if="{{item.cover!==''}}"
   src="{{host+item.cover}}" 
-  style="width:75px;height:100px"
+  style="width:75px;height:100px;box-shadow:black 0px 0px 5px; "
   mode="aspectFit" 
   bindtap="toListDetail"
   data-id="{{item._id}}"></image>
   <image 
   wx:else
   src="/icons/error.png" 
-  style="width:75px;height:100px"
+  style="width:75px;height:100px;box-shadow:black 0px 0px 5px;"
   mode="aspectFit" 
   bindtap="toListDetail"
   data-id="{{item._id}}"></image>

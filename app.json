@@ -8,7 +8,8 @@
     "pages/minor/minor",
     "pages/bookDetail/bookDetail",
     "pages/bookListDetail/bookListDetail",
-    "pages/help/help"
+    "pages/help/help",
+    "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "light",

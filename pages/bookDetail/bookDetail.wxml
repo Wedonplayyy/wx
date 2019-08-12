@@ -6,7 +6,7 @@
   <view class="title">{{book.title}}</view>
   <view class="author">{{book.author}}</view>
   <view style="width:250px;display:flex;padding:5px 10px;justify-content: space-between;">
-    <view><van-button plain round type="danger">开始阅读</van-button></view>
+    <view><van-button plain round type="danger" bindtap="toBook" data-id="{{id}}"  data-link="{{}}">开始阅读</van-button></view>
     <view><van-button plain round type="default">加入书架</van-button></view>
   </view>
   <view>
@@ -22,11 +22,24 @@
   <view>
     <van-tabs>
       <van-tab title="详情" ><view class="intro">简介：{{book.longIntro}}</view></van-tab>
-      <van-tab title="评价"></van-tab>
+      <van-tab title="评价({{comment.length}})" >
+        <view class="comment-item" wx:for="{{comment}}" wx:key="index">
+          <view style="padding:5px">
+            <image 
+            class="avatar"
+            mode="aspectFit" 
+            src="{{host+item.author.avatar}}"></image>
+          </view>
+          <view style="padding:0px 5px;">
+            <view style="color:orange;text-align:left;">{{item.author.nickname}}</view>
+            <view style="color:grey;font-size:16px;text-align:left;">{{item.title}}</view>
+          </view>
+        </view>
+      </van-tab>
     </van-tabs>
   </view>
   <view style="width:375px;margin-top:20px;">
-    <van-icon name="bars" style="vertical-align:middle;"/>总目录
+    <van-icon name="bars" style="vertical-align:middle;"/>总目录({{chapter}})
   </view>
   <view style="width:300px;display: flex;justify-content: space-between;margin-top:40px;">
     <view>看过这本书的人还看过</view>

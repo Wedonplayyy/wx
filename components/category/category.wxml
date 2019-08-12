@@ -3,7 +3,7 @@
  <view class="greytext ">{{name}}</view>
  <view class="grid">
   <view wx:for="{{array}}" wx:key="index" class="grid-item">
-   <view class="boldtext" bindtap="toMinor">
+   <view class="boldtext" bindtap="toMinor" data-gender="{{gender}}" data-major="{{item.name}}" data-id="{{index}}">
     {{item.name}}
    </view>
    <view class="greytext minortext">
